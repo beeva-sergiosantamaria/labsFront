@@ -1,0 +1,54 @@
+.backGroundImage{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.backgroundScafold{
+	width: 100%;
+}	
+
+.general{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+.lasbWaterMark{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding: 70px 0px;
+}
+.LabsTitle{
+	color: white;
+	font-size: 85px;
+	font-weight: bold;
+	margin: 20px 0px;
+	text-align: center;
+}
+.labsSubtitle{
+	color: white;
+	font-size: 25px;
+	text-align: center;
+}
+.LabsScrollButtonBox{
+	color: #106ffe;
+	text-align: center;
+	margin: 70px 0px;
+}
+.labsScrollButton{
+	color: #106ffe;
+	font-weight: bold;
+	text-align: center;
+	background-color: white;
+	padding: 10px 30px;
+	text-align: center;
+	border: none;
+	font-size: 20px;
+	text-decoration: none;
+	border-radius: 30px;
+	margin: 0px 0px 50px 0px;
+}	

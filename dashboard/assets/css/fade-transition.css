@@ -1,0 +1,16 @@
+body::-webkit-scrollbar { width: 0 !important }
+body { -ms-overflow-style: none; }
+body { overflow: -moz-scrollbars-none; }
+
+.fade-enter-active, .fade-leave-active {
+	transition-property: opacity;
+	transition-duration: .25s;
+}
+
+.fade-enter-active {
+	transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+	opacity: 0;
+}

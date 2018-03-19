@@ -1,0 +1,58 @@
+.navBox {
+	width: 100%;
+	background-color: #fbfbfb;
+	display: inline-block;
+}
+.brandLine {
+	width: 100%;
+	display: inline-block;
+	margin: 10px 0px 20px 0px;
+}
+.brandImage {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.calendar {
+	position: absolute;
+	right: 0px;
+	width: 29%;
+	text-align: right;
+}
+.calendar .button {
+	color: #666666;
+	font-weight: bold;
+	box-shadow: 2px 3px 7px 0px rgba(179,179,179,0.66);
+	text-align: center;
+	background-color: white;
+	padding: 15px 35px;
+	text-align: center;
+	border: none;
+	font-size: 10px;
+	text-decoration: none;
+	border-radius: 30px;
+	margin: 40px 40px 0px 0px;
+	line-height: 2.5;
+}
+.toolsMenu {
+	text-align: center;
+	margin: 0px 0px 30px 0px;
+	font-size: 20px;
+}
+.buttonsActive {
+	color: #333333 !important;
+	border-bottom: 5px solid rgba(100, 100, 255, 1) !important;
+}
+.toolsMenu .buttons {
+	color: #999999;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 5px solid rgba(100, 100, 255, 0); 
+	background: none;
+	margin: 5px 15px;
+	transition: all 0.2s ease-in-out;
+}
+.buttons:hover {
+	color: #333333;
+	border-bottom: 5px solid rgba(100, 100, 255, 1);
+}

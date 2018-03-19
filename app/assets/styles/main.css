@@ -1,0 +1,18 @@
+body{
+	overflow-x: hidden;
+}
+
+@font-face {
+    font-family: IBM;
+    src: url(app/assets/fonts/IBMPlexSans-Text.eot);
+}
+@font-face {
+    font-family: IBM;
+    src: url(app/assets/fonts/IBMPlexSans-Bold.eot);
+    font-weight: bold;
+}
+@font-face {
+    font-family: IBM;
+    src: url(app/assets/fonts/IBMPlexSans-Medium.eot);
+    font-weight: medium;
+}

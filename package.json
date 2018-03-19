@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "materialize-css": "^0.100.2",
+    "vue-parallax-js": "0.0.7",
+    "vue-router": "^3.0.1",
+    "vue.js": "^0.3.2"
+  }
+}
