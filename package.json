@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "jquery": "^3.3.1",
+    "masonry-layout": "^4.2.1",
     "materialize-css": "^0.100.2",
     "vue-parallax-js": "0.0.7",
     "vue-router": "^3.0.1",
