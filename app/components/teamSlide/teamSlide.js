@@ -7,22 +7,18 @@ let teamslide = Vue.component("teamSlide-component", {
 					<div class="teamPhoto"><img src="app/components/teamSlide/photos/PaulaCordero.png"/></div>
 					<div class="teamPhoto"><img src="app/components/teamSlide/photos/MarianClaudiu.png"/></div>
 					<div class="teamPhoto"><img src="app/components/teamSlide/photos/SergioSantamaria.png"/></div>
+					<div class="teamPhoto"><img src="app/components/teamSlide/photos/JesusMArtin.jpg"/></div>
+					<div class="teamPhoto"><img src="app/components/teamSlide/photos/lucasmenendez.jpg"/></div>
+					<div class="teamPhoto"><img src="app/components/teamSlide/photos/mariorodriguez.jpg"/></div>
+					<div class="teamPhoto"><img src="app/components/teamSlide/photos/samuelmunoz.jpg"/></div>
 				</div>`,
 	data() {
 		return {
 		}
 	},
 	methods: {
-		activeMenu: function(){
+		hoverEffect: function(){
 			this.active = !this.active;
-		},
-		addFilter: function(value){
-			if( this.filtersActivate.find( i => i == value ) ) this.filtersActivate.splice(this.filtersActivate.indexOf(value),1);
-			else this.filtersActivate.push(value);
-		},
-		checkFilters: function(value){
-			if( this.filtersActivate.find( i => i == value ) ) return true
-			else return false	
 		}
 	}	
 })		
