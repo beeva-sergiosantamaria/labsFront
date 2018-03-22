@@ -1,0 +1,37 @@
+.footerBox{
+}
+.footerBackground{
+	position: absolute;
+}
+.footerContent{
+	position: absolute;
+	width: 100%;
+}
+.footerTitle{
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 10%;
+	font-weight: bold;
+}
+.footerSubTitle{
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 2%;
+}
+.mailButtonBox{
+    text-align: center;
+    color: white;
+	margin-top: 5%;
+}
+.mailButton{
+	background-color: white;
+	display: inline-block;
+	color: rgba(100, 100, 255, 1);
+	padding: 15px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+}

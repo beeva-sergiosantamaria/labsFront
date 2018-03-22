@@ -1,0 +1,16 @@
+.teamBox{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.teamPhoto{
+    display: inline-block;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+    width: 7%;
+	transition: all 0.2s ease-in-out
+}
+.teamPhoto:hover{
+	width: 12%;
+	transition: all 0.2s ease-in-out
+}

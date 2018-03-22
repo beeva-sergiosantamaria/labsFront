@@ -1,0 +1,50 @@
+.bodyBox{
+	min-height: 450px;
+	background-color: #fbfbfb;
+	padding: 50px 5%;
+	text-align: center
+}
+.infoCard{
+	width: 250px;
+	height: 350px;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 2px 3px 7px 0px rgba(179,179,179,0.66);
+	margin: 2% 3%; 
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+	display: inline-block;
+}
+.infoCardImage{
+	width: 60%;
+	margin-top: 30px;
+}
+.techName{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+.techType{
+	font-size: 12px;
+	margin-top: 10px;
+}
+.techTag{
+	color: #999999;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.techFooter{
+	background-color: #3333ee;
+	color: white;
+	padding: 15px 0px;
+	margin-top: 20px;
+}
+.techStatusTitle{
+	font-size: 12px;
+}
+.techStatus{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+}
