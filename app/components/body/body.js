@@ -19,13 +19,13 @@ let dataBody = Vue.component("databody-component", {
 				reader.readFrom("data/tools/Quantum-computing", tool => {
 					let parser = new ToolParser(tool);
 					tools = parser.parse();
+					console.log(tools);
 					return tools;
 					//this.index.push(post);
 				}, err => {
 					console.error(err);
 				});
 			}
-
 			/*data: [
 				{'name':'Sketch', 'type':'Desing Tool', 'tag':'UX/UI', 'status':'Work in progress'},
 				{'name':'Sketch', 'type':'Desing Tool', 'tag':'UX/UI', 'status':'Work in progress'},

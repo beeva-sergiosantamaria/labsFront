@@ -176,7 +176,7 @@ class GitHubReader {
 	}
 }
 
-let reader = new GitHubReader("beeva-labs", "labs-knowledge");
+/*let reader = new GitHubReader("beeva-labs", "labs-knowledge");
 
 let tools = [];
 reader.readFrom("data/tools/Quantum-computing", tool => {
@@ -185,7 +185,7 @@ reader.readFrom("data/tools/Quantum-computing", tool => {
 	//this.index.push(post);
 }, err => {
 	console.error(err);
-});
+});*/
 
 /*document.getElementById("input").innerHTML = input;
 
