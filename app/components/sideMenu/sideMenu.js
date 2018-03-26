@@ -1,3 +1,13 @@
+let areasFilter = [];
+let areasFrom = new GitHubReader("beeva-labs", "labs-knowledge");
+	areasFrom.getAreas("data/tools", tool => {
+		tool.forEach((item) => {
+				areasFilter.push(item.name);
+			});
+	}, err => {
+		console.error(err);
+	});
+
 let SideMenu = Vue.component("sidemenu-component", {
 	template: 	`<div>
 					<div class="sideBox" v-bind:class="{ sideBoxOpen: active }">
@@ -10,7 +20,7 @@ let SideMenu = Vue.component("sidemenu-component", {
 		return {
 			active: false,
 			filtersActivate: [],
-			filtersCriteria: ['FrontEnd', 'BackEnd', 'mobile', 'Big Data', 'Machine Learning', 'IoT', 'Cloud', 'DevOps', 'Security', 'BlockChain', 'HCI', 'UX/UI']
+			filtersCriteria: areasFilter
 		}
 	},
 	methods: {

@@ -1,10 +1,9 @@
 class ToolParser {
-	/**
-	 * Define class attributes and split input into lines.
-	 */
-	constructor(input) {
+	
+	constructor(input,category) {
 		this.tool = {
 			title: "",
+			tag: category,
 			sections: []
 		};
 
@@ -15,10 +14,6 @@ class ToolParser {
 		}
 	}
 
-	/**
-	 * Call ToolParser methods to parse input lines and transform into
-	 * estructured data, and then return the results into an object.
-	 */
 	parse() {
 		this.extractTitle();
 		this.extractSections();
@@ -27,10 +22,6 @@ class ToolParser {
 		return this.tool;
 	}
 
-	/**
-	 * extractTitle Detects Tool title and delete title line from lines to 
-	 * continue parsing. Stores title into result object.
-	 */
 	extractTitle() {
 		let rgx = /^#{1}\s?(\w+)/g;
 		let title = rgx.exec(this.lines[0]);
@@ -40,23 +31,16 @@ class ToolParser {
 		}
 	}
 
-	/**
-	 * extractSections iterate over the rest of the lines and create sections
-	 * when detect section title. Then iterate until match other section title
-	 * parsing each mid line according to it format or type. Store sections 
-	 * into result object.
-	 */
 	extractSections() {
 		let section = {};
 		let codeblock = false;
 		this.lines.forEach(line => {
 			if (line.startsWith("##")) {
-				if (Object.keys(section).length > 0) this.tool.sections.push(section);
-
 				section = {
 					title: line.substring(2).trim(),
 					content: []
 				}
+				if (Object.keys(section).length > 0) this.tool.sections.push(section);
 			} else if (line.startsWith("```")) { 
 				codeblock = !codeblock;
 			} else {
@@ -66,10 +50,6 @@ class ToolParser {
 		});
 	}
 
-	/**
-	 * parseLine detects provided line type between `code`, `text`, `link` or 
-	 * `list` and format it into object. The result object is returned.
-	 */
 	parseLine(line, isCode) {
 		let l = { type: "text", content: line.trim() };
 
@@ -96,14 +76,9 @@ class ToolParser {
 				content: li[1].trim()
 			};
 		}
-
 		return l;
 	}
 
-	/**
-	 * clustering checks all codelines together and join all into a block
-	 * of code lines.
-	 */
 	clustering() {
 		this.tool.sections.forEach((section, index) => {
 			let start = -1;
@@ -161,6 +136,14 @@ class GitHubReader {
 			.catch(err => error(err));
 	}
 
+	getAreas(path, callback, error) {
+		let uri = `${ this.endpoint }/contents/${ path }`;
+		fetch(uri)
+			.then(res => res.json())
+			.then(post => callback(post))
+			.catch(err => error(err));
+	}
+
 	proccessPath(data, callback, error) {
 		let index = data.filter(item => item.type === "file");
 		if (index.length) {
@@ -182,7 +165,6 @@ let tools = [];
 reader.readFrom("data/tools/Quantum-computing", tool => {
 	let parser = new ToolParser(tool);
 	console.log(parser.parse());
-	//this.index.push(post);
 }, err => {
 	console.error(err);
 });*/
