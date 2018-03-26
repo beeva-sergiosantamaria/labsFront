@@ -1,12 +1,3 @@
-let areasFilter = [];
-let areasFrom = new GitHubReader("beeva-labs", "labs-knowledge");
-	areasFrom.getAreas("data/tools", tool => {
-		tool.forEach((item) => {
-				areasFilter.push(item.name);
-			});
-	}, err => {
-		console.error(err);
-	});
 
 let SideMenu = Vue.component("sidemenu-component", {
 	template: 	`<div>
@@ -20,7 +11,7 @@ let SideMenu = Vue.component("sidemenu-component", {
 		return {
 			active: false,
 			filtersActivate: [],
-			filtersCriteria: areasFilter
+			filtersCriteria: this.getAreaFilters();
 		}
 	},
 	methods: {
@@ -34,6 +25,17 @@ let SideMenu = Vue.component("sidemenu-component", {
 		checkFilters: function(value){
 			if( this.filtersActivate.find( i => i == value ) ) return true
 			else return false	
+		},
+		getAreaFilters: function(){
+			let areasFilter = [];
+			new GitHubReader("beeva-labs", "labs-knowledge").getAreas("data/tools", tool => {
+				tool.forEach((item) => {
+						areasFilter.push(item.name);
+					});
+			}, err => {
+				console.error(err);
+			});
+			return areasFilter;
 		}
 	}	
 })		

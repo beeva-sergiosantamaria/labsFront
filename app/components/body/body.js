@@ -17,10 +17,6 @@ let dataBody = Vue.component("databody-component", {
 			tools: this.getToolsList()
 		}
 	},
-    ready: function() {
-    	console.log('entra en ready');
-        this.getToolsList();
-    },
 	methods: {
 		getToolsList: function(){
 			let toolsList = [];
