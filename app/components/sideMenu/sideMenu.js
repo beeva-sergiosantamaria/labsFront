@@ -11,7 +11,7 @@ let SideMenu = Vue.component("sidemenu-component", {
 		return {
 			active: false,
 			filtersActivate: [],
-			filtersCriteria: this.getAreaFilters();
+			filtersCriteria: this.getAreaFilters()
 		}
 	},
 	methods: {

@@ -20,11 +20,15 @@ let dataBody = Vue.component("databody-component", {
 	methods: {
 		getToolsList: function(){
 			let toolsList = [];
-			new GitHubReader("beeva-labs", "labs-knowledge")
-				.readFrom("data/tools/Quantum-computing", tool => {
-					console.log('entra');
-					let parser = new ToolParser(tool,"Quantum-computing");
-					toolsList.push(parser.parse());
+			new GitHubReader("beeva-labs", "labs-knowledge").getAreas("data/tools", tool => {
+				tool.forEach((item) => {
+					new GitHubReader("beeva-labs", "labs-knowledge").readFrom("data/tools/"+item.name, eachTool => {
+						let parser = new ToolParser(eachTool,item.name);
+						toolsList.push(parser.parse());
+					}, err => {
+						console.error(err);
+					});
+				});
 			}, err => {
 				console.error(err);
 			});
@@ -32,7 +36,6 @@ let dataBody = Vue.component("databody-component", {
 		}
 	}	
 })	
-
 
 /*data: [
 	{'name':'Sketch', 'type':'Desing Tool', 'tag':'UX/UI', 'status':'Work in progress'}
