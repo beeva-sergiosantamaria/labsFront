@@ -30,6 +30,11 @@
 	width: 60%;
 	margin-top: 30px;
 }
+.infoCardText{
+    position: absolute;
+    width: 100%;
+    bottom: 80px;
+}
 .techName{
 	font-size: 16px;
 	font-weight: bold;
@@ -45,10 +50,24 @@
 	margin-top: 10px;
 }
 .techFooter{
-	background-color: #3333ee;
-	color: white;
-	padding: 15px 0px;
-	margin-top: 20px;
+    color: white;
+    padding: 15px 0px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.techInProgress{
+	background-color: #f4b042;
+
+}
+.techToAdopt{
+	background-color: #35c46e;
+	
+}
+.techToDiscard{
+	background-color: #c4354a;
+	
 }
 .techStatusTitle{
 	font-size: 12px;

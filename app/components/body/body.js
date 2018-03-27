@@ -2,10 +2,12 @@ let dataBody = Vue.component("databody-component", {
 	template: 	`<div class="bodyBox" id="cardTable">
 					<div v-for="item in tools" class="grid-item infoCard" v-on:click="eraseFile()" v-bind:class="{ inforcardFiltered: item.filtered }">
 						<img class="infoCardImage" v-bind:src="item.sections[0].content[0].href">
-						<div class="techName">{{ item.title }}</div>
-						<div class="techType">{{ item.sections[7].content[0].content }}</div>
-						<div class="techTag">{{ item.tag }}</div>
-						<div class="techFooter">
+						<div class="infoCardText">
+							<div class="techName">{{ item.title }}</div>
+							<div class="techType">{{ item.sections[7].content[0].content }}</div>
+							<div class="techTag">{{ item.tag }}</div>
+						</div>
+						<div class="techFooter" v-bind:class="checkTechStatus(item.sections[8].content[0].content)">
 							<div class="techStatusTitle">Status</div>
 							<div class="techStatus">{{ item.sections[8].content[0].content }}</div>
 						</div>
@@ -20,6 +22,19 @@ let dataBody = Vue.component("databody-component", {
 		eraseFile: function(){
 			//console.log(this.$parent.files);
 			//this.$parent.files.splice(0,1);
+		},
+		checkTechStatus: function(value){
+			switch (value.toLowerCase()){
+				case "not yet":
+					return "techToDiscard";
+					break;
+				case "to adopt":
+					return "techToAdopt";
+					break;
+				case "work in progress":
+					return "techInProgress";
+					break;
+			}
 		}
 	}	
 })	
