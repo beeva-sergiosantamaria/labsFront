@@ -49,6 +49,7 @@
     width: 100%;
     background: #fbfbfb;
     padding: 15px 0px;
+    z-index: 999;
 }
 .toolsMenuFixed{
 	position: fixed;
@@ -100,4 +101,5 @@
     position: absolute;
     right: 50px;
     margin-top: 10px;
+    cursor: pointer;
 }

@@ -4,7 +4,8 @@ class ToolParser {
 		this.tool = {
 			title: "",
 			tag: category,
-			sections: []
+			sections: [],
+			filtered: false
 		};
 
 		this.lines = [];

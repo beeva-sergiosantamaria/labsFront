@@ -23,6 +23,7 @@ let Navbar = Vue.component("navbar-component", {
 	},
 	methods: {
 		ActiveMenuTool: function(value){
+			this.$parent.bodyType = value;
 			this.ToolActive = value;
 		},
 		 handleScroll () {
