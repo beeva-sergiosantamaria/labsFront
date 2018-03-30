@@ -1,27 +1,14 @@
-/*const routes = [
-	{ name: "login", path: "/login", component: Login },
+const routes = [
 	{ 
 		path: "/", 
-		component: Main,
+		component: header,
 		children: [
-			{ name: "home", path: "", component: Home },
-			{ name: "tools", path: "tools", component: ToolList },
-			{ name: "edit-tool", path: "tools/:id", component: ToolForm },
-			{ name: "new-tool", path: "tools/new", component: ToolForm }
 		]
 	},
-	{ name: "notfound", path: "*", component: NotFound },
+	{
+		path: "/technology/:name",
+		component: techologyFile
+	}
 ]
 
 const Router = new VueRouter({  routes });
-
-Router.beforeEach((to, from, next) => {
-	const $storage = new Storage();
-
-	let user = $storage.get("user");
-	if (!user && to.path !== "/login") {
-		next("login");
-	} else {
-		next();
-	}
-});*/
