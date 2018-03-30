@@ -1,5 +1,4 @@
 Vue.use(ParallaxJS)
-
 var fileData = 
 [
 	{ 	'sections': 
@@ -127,7 +126,8 @@ let header = new Vue({
 		});*/
 		this.files = fileData;
 		fileData.forEach(item => {
-			if( this.filterList.find( i => i == item.tag ) == undefined ) this.filterList.push(item.tag);
+			if( this.filterList.find( i => i.tag == item.tag ) == undefined ) this.filterList.push({ "tag": item.tag,"type": "tag", "status": true });
+			if( this.filterList.find( i => i.tag == item.title ) == undefined ) this.filterList.push({ "tag": item.title,"type": "title", "parent": item.tag, "status": true });
 		});
 	}	
 })
