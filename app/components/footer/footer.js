@@ -9,6 +9,8 @@ let LabsFooter = Vue.component("labsFooter-component", {
 						</div>
 					</div>
 				</div>`,
+	components: {
+	},			
 	data() {
 		return {
 		}

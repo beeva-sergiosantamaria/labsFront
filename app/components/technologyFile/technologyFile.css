@@ -46,14 +46,14 @@
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    color: #6464ff;
+    color: #648bff;
     margin-right: 1%;
 }
 .ToolFileQuote{
-    color: #333333;
+    color: #666666;
     font-style: italic;
-    padding-left: 2%;
-	margin-bottom: 1%;
+    padding-left: 10%;
+    margin-bottom: 3%;
 
 }
 .linksTitle, .toolFilefirstStepsTitle, .toolFileAudiovisTitle, .toolFileDemoTitle{

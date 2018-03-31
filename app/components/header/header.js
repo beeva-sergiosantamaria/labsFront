@@ -28,13 +28,13 @@ let header = Vue.component("header-component",{
 		"navbar": Navbar,
 		"sidemenu": SideMenu,
 		"labsFooter": LabsFooter,
+		"teamslide": teamslide,
 		"infobox": infobox,
-		"detailedInfo": detailedInfo,
-		"teamslide": teamslide
+		"detailedInfo": detailedInfo
 	},
 	data() {
 		return{
-			dynamicComponent: "detailedInfo"
+			dynamicComponent: "infobox"
 		}
 	},
 	created:  function(){

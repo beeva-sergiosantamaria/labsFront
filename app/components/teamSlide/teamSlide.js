@@ -1,5 +1,6 @@
 let teamslide = Vue.component("teamSlide-component", {
 	template: 	`<div class="teamBox">
+					<div id="labstitle" class="teamTitle">Our team</div>
 					<div v-for="item in data" :id="item.name" class="teamPhoto" v-on:mouseover="hoverEffect(item.name)" v-on:mouseleave="leaveEffect(item.name)"><img :src="photoUrl+item.photo"/></div>
 				</div>`,
 	data() {
@@ -23,8 +24,7 @@ let teamslide = Vue.component("teamSlide-component", {
 	},
 	methods: {
 		hoverEffect: function(id){
-			//this.active = !this.active;
-			if( $('#'+id).prev()[0] ) $('#'+id).prev().addClass('teamPhotosides');
+			if( $('#'+id).prev()[0] && $('#'+id).prev()[0].id!="labstitle" ) $('#'+id).prev().addClass('teamPhotosides');
 			else if( $('#'+id).next()[0] ) $('#'+id).next().addClass('teamPhotosides');
 		},
 		leaveEffect: function(id){

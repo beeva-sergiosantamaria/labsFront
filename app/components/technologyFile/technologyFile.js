@@ -11,20 +11,21 @@ let detailedInfo = Vue.component("detailedInfo-component", {
 						<div class="ToolFileQuote"><q>IBM Q Experience es la plataforma que te permite comenzar en la computación cuántica.</q></div>
 						<div class="toolFileLinksBox">
 							<div class="linksTitle">Enlaces de interes: </div>
-							<div class="linkOption">IBM Quantum Experience</div>
-							<div>Awesome Tutorial</div>
-							<div>Conclusiones</div>
+							<div class="linkOption"><b>IBM Quantum Experience</b> (https://quantumexperience.ng.bluemix.net/qx/experience)</div>
+							<div class="linkOption"><b>Awesome Tutorial</b> (https://github.com/krishnakumarsekar/awesome-quantum-machine-learning)</div>
+							<div class="linkOption"><b>Conclusiones</b> (https://docs.google.com/presentation/d/1gsaz5zkOGpdAoPFRoAJAwW9Tvz70meDYgfdslFop2PA/edit)</div>
 						</div>
 						<div class="toolFileDemoBox">
 							<div class="toolFileDemoTitle">Demo</div>
-							<div>Algoritmo Grover</div>
+							<div><b>Algoritmo Grover</b> (https://quantumexperience.ng.bluemix.net/qx/tutorial?sectionId=full-user-guide&page=004-Quantum_Algorithms~2F070-Grover%27s_Algorithm)</div>
 						</div>
 						<div class="toolFileAudiovisBox">
 							<div class="toolFileAudiovisTitle">Contenido audiovisual</div>
-							<div>Tutorial demo.</div>
+							<div><b>Tutorial experimento.</b> (https://www.youtube.com/watch?v=pYD6bvKLI_c)</div>
 						</div>
 						<div class="toolFilefirstStepsBox">
 							<div class="toolFilefirstStepsTitle">Primeros Pasos</div>
+							<div><b>Beginners guide</b> (https://quantumexperience.ng.bluemix.net/qx/tutorial?sectionId=beginners-guide&page=introduction)</div>
 						</div>
 						<div class="toolFileStatus">Work in progress</div>
 					</div>
