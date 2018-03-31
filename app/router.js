@@ -1,14 +1,10 @@
 const routes = [
 	{ 
-		path: "/", 
+		path: "/:menuOption?/:id?", 
 		component: header,
 		children: [
 		]
-	},
-	{
-		path: "/technology/:name",
-		component: techologyFile
 	}
 ]
 
-const Router = new VueRouter({  routes });
+const Router = new VueRouter({ routes });

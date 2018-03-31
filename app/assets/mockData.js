@@ -26,7 +26,7 @@ var fileData =
 			{ 'content': [{ 'type': 'text', 'content': [] }],'title': "Soporte audiovis al adyacente" },
 			{ 'content': [{ 'type': 'text', 'content': [] }],'title': "Primeros pasos" },
 			{ 'content': [{ 'type': 'text', 'content': "quantum" }],'title': "Categoría tecnológica" },
-			{ 'content': [{ 'type': 'text', 'content': "Work in progress" }],'title': "Estado de la tecnología" }
+			{ 'content': [{ 'type': 'text', 'content': "not yet" }],'title': "Estado de la tecnología" }
 		], 
 		'tag': "Quantum Computing", 
 		'title': "QuantumExperience",
@@ -42,7 +42,7 @@ var fileData =
 			{ 'content': [{ 'type': 'text', 'content': [] }],'title': "Soporte audiovis al adyacente" },
 			{ 'content': [{ 'type': 'text', 'content': [] }],'title': "Primeros pasos" },
 			{ 'content': [{ 'type': 'text', 'content': "quantum cloud proccessing" }],'title': "Categoría tecnológica" },
-			{ 'content': [{ 'type': 'text', 'content': "To Adopt" }],'title': "Estado de la tecnología" }
+			{ 'content': [{ 'type': 'text', 'content': "work in progress" }],'title': "Estado de la tecnología" }
 		], 
 		'tag': "Quantum Computing", 
 		'title': "Quantum Test",
@@ -79,14 +79,17 @@ var fileData =
 
 new GitHubReader("beeva-labs", "labs-knowledge").getAreas("data/tools", tool => {
 	tool.forEach(item => {
-		if( this.filterList.find( i => i == item.name ) == undefined ) this.filterList.push(item.name);
 		new GitHubReader("beeva-labs", "labs-knowledge").readFrom("data/tools/"+item.name, eachTool => {
-			let parser = new ToolParser(eachTool,item.name);
-			this.files.push(parser.parse());
+			let parser = new ToolParser(eachTool,item.name).parse();
+			this.files.push(parser);
+			if( this.filterList.find( i => i.tag == parser.tag ) == undefined ) this.filterList.push({ "tag": parser.tag,"type": "tag", "status": true });
+			if( this.filterList.find( i => i.tag == parser.title ) == undefined ) this.filterList.push({ "tag": parser.title,"type": "title", "parent": parser.tag, "status": true });
 		}, err => {
 			console.error(err);
 		});
 	});
 }, err => {
 	console.error(err);
-});*/
+});
+
+*/

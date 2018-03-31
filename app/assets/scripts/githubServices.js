@@ -1,5 +1,4 @@
 class ToolParser {
-	
 	constructor(input,category) {
 		this.tool = {
 			title: "",

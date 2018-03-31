@@ -28,7 +28,7 @@ let Navbar = Vue.component("navbar-component", {
 	},
 	methods: {
 		ActiveMenuTool: function(value){
-			this.$parent.bodyType = value;
+			this.$root.bodyType = value;
 			this.ToolActive = value;
 		},
 		 handleScroll () {
@@ -40,7 +40,7 @@ let Navbar = Vue.component("navbar-component", {
 		inputTypeHead: function(word){
 			this.itemsFounded = [];
 			if( word.length > 0 ) {
-				this.$parent.filterList.forEach( item =>{
+				this.$root.filterList.forEach( item =>{
 					let itemClear = item.tag.replace(/[^\w]/g, '');
 					if( itemClear.match(new RegExp('.{1,' + word.length + '}', 'g')).find( i => i.toLowerCase() == word.toLowerCase() ) && item.status) this.itemsFounded.push({"tech":item.tag, "type": item.type });
 				})
@@ -50,10 +50,10 @@ let Navbar = Vue.component("navbar-component", {
 			if(object.type == "tag"){
 				this.inputValue = "";
 				this.itemsFounded = [];
-				this.$parent.filterList.forEach( item =>{
+				this.$root.filterList.forEach( item =>{
 						if( item.tag == object.tech ) item.status = !item.status;
 					})
-				this.$parent.files.forEach( item => {
+				this.$root.files.forEach( item => {
 					if( item.tag == object.tech ) item.filtered = !item.filtered;
 				})
 			}
