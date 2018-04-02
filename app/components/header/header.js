@@ -21,14 +21,12 @@ let header = Vue.component("header-component",{
 					<sidemenu></sidemenu>
 					<navbar></navbar>
 					<component v-bind:is="dynamicComponent"></component>
-					<teamslide></teamslide>
 					<labsFooter></labsFooter>
 				</div>`,
 	components:	{
 		"navbar": Navbar,
 		"sidemenu": SideMenu,
 		"labsFooter": LabsFooter,
-		"teamslide": teamslide,
 		"infobox": infobox,
 		"detailedInfo": detailedInfo
 	},

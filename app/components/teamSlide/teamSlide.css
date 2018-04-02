@@ -5,12 +5,12 @@
 }
 .teamtitle{
     font-size: 30px;
-    color: #648bff;
+    color: #ffffff;
     text-align: left;
     padding-top: 1%;
-    margin: 3% 0% 3% 10%;
+    margin: 1% 0% 1% 10%;
     width: 50%;
-    border-top: solid 3px #648bff;
+    border-top: solid 3px #ffffff;
 
 }
 .teamPhoto{

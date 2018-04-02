@@ -1,7 +1,7 @@
 let LabsFooter = Vue.component("labsFooter-component", {
 	template: 	`<div class="footerBox">
-					<img class="backgroundScafold footerBackground" src="app/assets/images/labs_footer.png"/>
 					<div class="footerContent">
+						<teamslide></teamslide>
 						<div class="footerTitle">Contact Us</div>
 						<div class="footerSubTitle">Mail us for support or any questions!</div>
 						<div class="mailButtonBox" v-on:click="sendMail">
@@ -10,6 +10,7 @@ let LabsFooter = Vue.component("labsFooter-component", {
 					</div>
 				</div>`,
 	components: {
+		"teamslide": teamslide
 	},			
 	data() {
 		return {
