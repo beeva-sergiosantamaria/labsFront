@@ -30,6 +30,7 @@ let Navbar = Vue.component("navbar-component", {
 		ActiveMenuTool: function(value){
 			this.$root.bodyType = value;
 			this.ToolActive = value;
+			this.$parent.dynamicComponent = value.toLowerCase();
 		},
 		 handleScroll () {
 		    if( document.body.scrollTop > ( window.innerHeight + $("#brandLine").innerHeight()) ) {

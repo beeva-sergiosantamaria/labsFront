@@ -2,7 +2,7 @@ let detailedInfo = Vue.component("detailedInfo-component", {
 	template: 	`<div class="techBox">
 					<div class="techFile">
 						<div class="closeFileBox">
-							<div v-on:click="$parent.dynamicComponent = 'infobox'" class="closeFileButton"><i class="material-icons closeFileIcon">close</i></div>
+							<div v-on:click="$parent.dynamicComponent = 'tools'" class="closeFileButton"><i class="material-icons closeFileIcon">close</i></div>
 						</div>
 						<div class="toolFileTitleBox">
 							<div class="toolFileTitle">IBMQExperience</div> 
