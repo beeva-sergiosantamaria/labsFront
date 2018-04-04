@@ -10,7 +10,8 @@ let app = new Vue({
 		return {
 			files: [],
 			filterList: [],
-			bodyType: 'Tools'
+			bodyType: 'Tools',
+			listOfPost: []
 		}
 	},
 	created() {
@@ -18,10 +19,15 @@ let app = new Vue({
 	},
 	methods: {
 		loadDatas: function(){
+			let test = [];
 			this.files = fileData;
 			fileData.forEach(item => {
 				if( this.filterList.find( i => i.tag == item.tag ) == undefined ) this.filterList.push({ "tag": item.tag,"type": "tag", "status": true });
 				if( this.filterList.find( i => i.tag == item.title ) == undefined ) this.filterList.push({ "tag": item.title,"type": "title", "parent": item.tag, "status": true });
+			});
+			new mediumData().getListOfPost("beeva-labs", postit => {
+				this.listOfPost = postit.items;
+				console.log(this.listOfPost);
 			});
 		}
 	}

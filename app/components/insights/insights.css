@@ -1,0 +1,31 @@
+.postsBox{
+	min-height: 450px;
+	background-color: #fbfbfb;
+	padding: 50px 5%;
+	text-align: center
+}
+.postEntryCard{
+	width: 30%;
+	height: 150px;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 2px 3px 7px 0px rgba(179,179,179,0.66);
+	margin: 0.1% 0.2%; 
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+	display: inline-block;
+	opacity: 1;
+	transform: scale(1);
+	transition: all 0.1s ease-in-out;
+}
+.postCardTitle{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-align: left;
+    width: 60%;
+    border-top: 3px solid;
+    padding-top: 10px;
+}
