@@ -12,7 +12,7 @@ let insights = Vue.component("insights-component", {
 	methods: {
 		urlReditect: function(dir){
 			console.log(dir);
-			window.location.assign(dir);
+			window.open(dir, "_blank");
 		}
 	}	
 })		
