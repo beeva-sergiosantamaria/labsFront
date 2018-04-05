@@ -20,16 +20,20 @@ let header = Vue.component("header-component",{
 					</div>
 					<sidemenu></sidemenu>
 					<navbar></navbar>
-					<component v-bind:is="dynamicComponent"></component>
+					<transition name="component-fade" mode="out-in">
+						<component :is="dynamicComponent"></component>	
+					</transition>	
 					<labsFooter></labsFooter>
 				</div>`,
 	components:	{
 		"navbar": Navbar,
 		"sidemenu": SideMenu,
 		"labsFooter": LabsFooter,
-		"tools": infobox,
+		"tools": tools,
 		"detailedInfo": detailedInfo,
-		"insights":insights
+		"insights":insights,
+		"stacks":stacks,
+		"prototipes": prototipes
 	},
 	data() {
 		return{

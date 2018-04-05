@@ -58,15 +58,15 @@
     width: 100%;
 }
 .techInProgress{
-	background-color: #f4b042;
+	background-color: #04bcf3;
 
 }
 .techToAdopt{
-	background-color: #35c46e;
+	background-color: #1d6ca4;
 	
 }
 .techToDiscard{
-	background-color: #c4354a;
+	background-color: #ff7c8f;
 	
 }
 .techStatusTitle{

@@ -1,6 +1,6 @@
 let teamslide = Vue.component("teamSlide-component", {
 	template: 	`<div class="teamBox">
-					<div id="labstitle" class="teamTitle">Our team</div>
+					<div id="labstitle" class="teamTitle">Know our team</div>
 					<div v-for="item in data" :id="item.name" class="teamPhoto" v-on:mouseover="hoverEffect(item.name)" v-on:mouseleave="leaveEffect(item.name)"><img :src="photoUrl+item.photo"/></div>
 				</div>`,
 	data() {
