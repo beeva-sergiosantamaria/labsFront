@@ -17,6 +17,7 @@
 .toolFileTitleBox, .toolFileAudiovisBox, .toolFilefirstStepsBox, .toolFileLinksBox, .toolFileTypeBox, .toolFileDemoDescBox{
 	padding-left: 8%;
 	margin-bottom: 2%;
+    padding-bottom: 2%;
 }
 .closeFileBox {
 	width: 100%;
@@ -26,7 +27,7 @@
     display: inline-block;
     padding: 15px;
     cursor: pointer;
-    color: #dddddd;
+    color: #ffffff;
     margin-right: 15%;
 }
 .closeFileIcon{
@@ -71,7 +72,7 @@
     float: left;
 }
 .toolFileDemoLink{
-    background: #71da50;
+    background: #18d349;
     text-align: center;
     color: white;
     padding: 5% 0%;
@@ -117,6 +118,7 @@
 }
 .linksTitle, .toolFilefirstStepsTitle, .toolFileAudiovisTitle, .toolFileDemoTitle{
     margin-bottom: 3%;
+    padding-top: 1%;
     font-size: 25px;
     color: #444444;
     width: 30%;
@@ -153,4 +155,28 @@
     float: right;
     margin-right: 3%;
     border-radius: 0px 0px 20px 20px;
+}
+.toolFilefirstStepsBox{
+    background-color: #dddddd;;
+}
+.toolFilefirstStepsTitle{
+}
+.toolFileFirstStepFile{
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 2%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 2%;
+    position: relative;
+}
+.firstStepOrder{
+    font-size: 25px;
+    font-weight: bold;
+}
+.firstSteptext{
+    margin-top: 10%;
+    display: inline-grid;
 }

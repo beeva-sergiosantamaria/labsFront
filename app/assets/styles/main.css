@@ -14,7 +14,7 @@
 }
 @font-face {
     font-family: roboto;
-    src: url(/vueTest/app/assets/fonts/Roboto-Regular.ttf);
+    src: url(/labsFront/app/assets/fonts/Roboto-Regular.ttf);
 }
 
 ::-webkit-scrollbar { 

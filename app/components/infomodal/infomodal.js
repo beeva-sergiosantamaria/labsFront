@@ -36,15 +36,26 @@ let detailedInfo = Vue.component("detailedInfo-component", {
 								<div class="toolAudioVisLink">Tutorial experimento</div>
 							</div>
 						</div>
-						<div class="toolFileLinksBox">
-							<div class="linksTitle">Enlaces de interes: </div>
-							<div class="linkOption"><b>IBM Quantum Experience</b> (https://quantumexperience.ng.bluemix.net/qx/experience)</div>
-							<div class="linkOption"><b>Awesome Tutorial</b> (https://github.com/krishnakumarsekar/awesome-quantum-machine-learning)</div>
-							<div class="linkOption"><b>Conclusiones</b> (https://docs.google.com/presentation/d/1gsaz5zkOGpdAoPFRoAJAwW9Tvz70meDYgfdslFop2PA/edit)</div>
-						</div>
 						<div class="toolFilefirstStepsBox">
-							<div class="toolFilefirstStepsTitle">Primeros Pasos</div>
-							<div><b>Beginners guide</b> (https://quantumexperience.ng.bluemix.net/qx/tutorial?sectionId=beginners-guide&page=introduction)</div>
+							<div class="toolFilefirstStepsTitle">First Steps</div>
+							<div class="toolFileFirstStepFile">
+								<div class="firstStepOrder">01</div>
+								<div class="firstSteptext">Download from <a href="https://goland.org/dll/" target="_blank">https://goland.org/dll/</a> </div>
+							</div>
+							<div class="toolFileFirstStepFile">
+								<div class="firstStepOrder">02</div>
+								<div class="firstSteptext">Install with: 'tar -C/usr/local -xzf go$VERSION. $OS-$ARCH.tar.gz'</div>
+							</div>
+							<div class="toolFileFirstStepFile">
+								<div class="firstStepOrder">03</div>
+								<div class="firstSteptext">Add Go to PATH: 'export PATH=$PATH:/usr/local/go/bin'</div>
+							</div>
+						</div>
+						<div class="toolFileLinksBox">
+							<div class="linksTitle">Link</div>
+							<div class="linkOption"><b>IBM Quantum Experience</b> <p><a href="https://quantumexperience.ng.bluemix.net/qx/experience">https://quantumexperience.ng.bluemix.net/qx/experience</a></p></div>
+							<div class="linkOption"><b>Awesome Tutorial</b> <p><a href="https://github.com/krishnakumarsekar/awesome-quantum-machine-learning">https://github.com/krishnakumarsekar/awesome-quantum-machine-learning</a></p></div>
+							<div class="linkOption"><b>Conclusiones</b> <p><a href="https://docs.google.com/presentation/d/1gsaz5zkOGpdAoPFRoAJAwW9Tvz70meDYgfdslFop2PA/edit">https://docs.google.com/presentation/d/1gsaz5zkOGpdAoPFRoAJAwW9Tvz70meDYgfdslFop2PA/edit</a></p></div>
 						</div>
 					</div>
 				</div>`,
@@ -77,4 +88,6 @@ let detailedInfo = Vue.component("detailedInfo-component", {
 	<div><b>Algoritmo Grover</b> (https://quantumexperience.ng.bluemix.net/qx/tutorial?sectionId=full-user-guide&page=004-Quantum_Algorithms~2F070-Grover%27s_Algorithm)</div>
 </div>
 
-(https://www.youtube.com/watch?v=pYD6bvKLI_c)*/
+(https://www.youtube.com/watch?v=pYD6bvKLI_c)
+
+<b>Beginners guide</b> (https://quantumexperience.ng.bluemix.net/qx/tutorial?sectionId=beginners-guide&page=introduction)*/

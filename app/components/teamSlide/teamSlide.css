@@ -8,10 +8,9 @@
     color: #ffffff;
     text-align: left;
     padding-top: 1%;
-    margin: 1% 0% 1% 10%;
+    margin: 0% 0% 1% 10%;
     width: 50%;
-    border-top: solid 3px #ffffff;
-
+    /* border-top: solid 3px #ffffff; */
 }
 .teamPhoto{
     display: inline-block;
