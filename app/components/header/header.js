@@ -3,12 +3,12 @@ window.EventWatcher = new Vue();
 let header = Vue.component("header-component",{
 	template: 	`<div>
 					<div style="overflow: hidden; height: 100%;" id="scene">
-						<img class="backgroundScafold" src="app/assets/images/WebLabs-Fondo-azul.png"/>
-						<img data-depth="0.4" data-limit-x="true" class="backGroundImage" src="app/assets/images/webLabs-sombra2.png"/>
-						<img data-depth="0.8" data-limit-x="true" class="backGroundImage" src="app/assets/images/webLabs-sombra1.png"/>
-						<img data-depth="0.9" data-limit-x="true" class="backGroundImage" src="app/assets/images/webLabs-ilustracion-probetas.png"/>
-						<img data-depth="2" data-limit-x="true" class="backGroundImage" src="app/assets/images/webLabs-ilustracion-postit.png"/>
-						<img data-depth="1.001" data-limit-x="true" class="backGroundImage" src="app/assets/images/webLabs-ilustracion-llamas.png"/>
+						<img class="backgroundScafold" src="app/assets/images/weblabs-fondo-azul.png"/>
+						<img data-depth="0.4" data-limit-x="true" class="backGroundImage" src="app/assets/images/weblabs-sombra2.png"/>
+						<img data-depth="0.8" data-limit-x="true" class="backGroundImage" src="app/assets/images/weblabs-sombra1.png"/>
+						<img data-depth="0.9" data-limit-x="true" class="backGroundImage" src="app/assets/images/weblabs-ilustracion-probetas.png"/>
+						<img data-depth="2" data-limit-x="true" class="backGroundImage" src="app/assets/images/weblabs-ilustracion-postit.png"/>
+						<img data-depth="1.001" data-limit-x="true" class="backGroundImage" src="app/assets/images/weblabs-ilustracion-llamas.png"/>
 					</div>
 					<div class="general">
 						<div class="lasbWaterMark">Web Labs | BEEVA</div>
