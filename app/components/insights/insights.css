@@ -29,3 +29,11 @@
     border-top: 3px solid;
     padding-top: 10px;
 }
+	
+.fade-transition {
+  transition: opacity 1s ease;
+}
+
+.fade-enter, .fade-leave {
+  opacity: 0;
+}

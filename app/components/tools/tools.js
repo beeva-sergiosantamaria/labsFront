@@ -1,4 +1,4 @@
-let infobox = Vue.component("infobox-component", {
+let tools = Vue.component("tools-component", {
 	template: 	`<div class="bodyBox" id="cardTable">
 					<div v-for="item in $root.files" v-on:click="$parent.dynamicComponent = 'detailedInfo'" class="grid-item infoCard" v-bind:class="{ inforcardFiltered: item.filtered }">
 						<img class="infoCardImage" v-bind:src="item.sections[0].content[0].href">

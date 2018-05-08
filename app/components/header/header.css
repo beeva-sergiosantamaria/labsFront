@@ -40,7 +40,7 @@
 	margin: 70px 0px;
 }
 .labsScrollButton{
-	color: #648bff;
+	color: #1d6ca4;
 	text-align: center;
 	font-weight: bold;
 	background-color: white;
@@ -54,3 +54,16 @@
 	border-radius: 30px;
 	margin: 0px 0px 50px 0px;
 }	
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: all .2s ease;
+}
+.component-fade-enter{
+	transform-origin: 0% 0%;
+  	transform: translateX(1500px);	
+  	opacity: 0;
+}
+.component-fade-leave-to{
+	transform-origin: 0% 0%;
+  	transform: translateX(-1500px);	
+  	opacity: 0;
+}

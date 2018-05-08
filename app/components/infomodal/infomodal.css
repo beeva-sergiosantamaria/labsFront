@@ -1,0 +1,182 @@
+.techBox{
+	min-height: 450px;
+	background-color: #a0a0a0;
+	text-align: center;
+	padding: 3% 0%;
+}
+.techFile{
+    border-radius: 20px;
+    background-color: white;
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 7px 0px rgba(179,179,179,1);
+    overflow: hidden;
+}
+.toolFileTitleBox, .toolFileAudiovisBox, .toolFilefirstStepsBox, .toolFileLinksBox, .toolFileTypeBox, .toolFileDemoDescBox{
+	padding-left: 8%;
+	margin-bottom: 2%;
+    padding-bottom: 2%;
+}
+.closeFileBox {
+	width: 100%;
+	text-align: right;
+}
+.closeFileButton{
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    margin-right: 15%;
+}
+.closeFileIcon{
+	font-size: 40px !important;
+}
+.toolFileTitleBox{
+	width: 100%;
+	text-align: left;
+    margin-bottom: 0%;
+}
+.toolFileTag{
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    color: #666666;
+    margin: 3% 8%;
+}
+.toolFileTitle{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #444444;
+    /* margin-right: 1%; */
+}
+.toolFileSubTitle{
+    color: #666666;
+    font-weight: bold;
+    font-size: 12px;
+}
+.toolFileDemoDescBox{
+    display: inline-block;
+}
+.toolFileDemoBox{
+    background-image: url(/labsFront/app/assets/images/letters.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 30%;
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.toolFileDemoLink{
+    background: #18d349;
+    text-align: center;
+    color: white;
+    padding: 5% 0%;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+}
+.toolFileDescBox{
+    position: relative;
+    float: left;
+    width: 50%;
+    margin: 0% 5%;
+
+}
+.toolFileDescTitle{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 2%;
+    text-align: justify;
+}
+.toolFileDescText{
+    text-align: justify;
+    font-size: 20px;
+    color: #444444;
+}
+.ToolFileQuote{
+    color: #444444;
+    font-style: italic;
+    padding: 2% 10%;
+    margin-bottom: 3%;
+    background: #e5f3ff;
+
+}
+.tweetButton{
+    display: inline-block;
+    color: #00abff;
+    border: solid 2px #00abff;
+    padding: 1%;
+    margin-top: 3%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.linksTitle, .toolFilefirstStepsTitle, .toolFileAudiovisTitle, .toolFileDemoTitle{
+    margin-bottom: 3%;
+    padding-top: 1%;
+    font-size: 25px;
+    color: #444444;
+    width: 30%;
+    font-weight: bold;
+}
+.toolAudioVisFile{
+    width: 200px;
+    height: 200px;
+    background: #1d6ca4;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    margin-right: 1%;
+}
+.toolAudioVisLink{
+    background: #484747;
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10% 0%;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+.toolFileStatus{
+    background-color: #f4b042;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 2% 0%;
+    width: 15%;
+    float: right;
+    margin-right: 3%;
+    border-radius: 0px 0px 20px 20px;
+}
+.toolFilefirstStepsBox{
+    background-color: #dddddd;;
+}
+.toolFilefirstStepsTitle{
+}
+.toolFileFirstStepFile{
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 2%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 2%;
+    position: relative;
+}
+.firstStepOrder{
+    font-size: 25px;
+    font-weight: bold;
+}
+.firstSteptext{
+    margin-top: 10%;
+    display: inline-grid;
+}
