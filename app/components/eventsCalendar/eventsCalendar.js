@@ -6,21 +6,27 @@ let eventscalendar = Vue.component("eventscalendar-component", {
                                 <div v-on:click="$parent.activeCalendar = false" class="closeCalendarButton"><i class="material-icons closeFileIcon">close</i></div>
 							</div>	
 							<div class="eventsCalendar">
-								<div class="calendarHeader">
-									<i class="material-icons chevronLeft" @click="subtractMonth">chevron_left</i>
-									<div class="calendarHeaderMonth">{{month + ' - ' + year}}</div>
-									<i class="material-icons chevronRight" @click="addMonth">chevron_right</i>
+								<div class="calendarTable">
+									<div class="calendarHeader">
+										<div class="calendarHeaderMonth">{{month + '   ' + year}}</div>
+										<i class="material-icons chevronRight" @click="addMonth">chevron_right</i>
+										<i class="material-icons chevronLeft" @click="subtractMonth">chevron_left</i>
+									</div>
+									<ul class="calendarWeekdays">
+										<li class="calendarWeekDayText" v-for="day in days">{{ day }}</li>
+									</ul>
+									<ul class="calendarDates">
+										<li class="blackDay" v-for="blank in firstDayOfMonth"></li>
+										<li v-for="date in daysInMonth" class="calendarDaysText"
+											:class="{'calendarCurrentDay': date == initialDate &amp;&amp; month == initialMonth && year == initialYear}">
+											<span>{{ date }}</span>
+										</li>
+									</ul>
 								</div>
-								<ul class="calendarWeekdays">
-									<li class="calendarWeekDayText" v-for="day in days">{{ day }}</li>
-								</ul>
-								<ul class="calendarDates">
-									<li class="calendarDaysText blackDay" v-for="blank in firstDayOfMonth"></li>
-									<li v-for="date in daysInMonth" class="calendarDaysText"
-										:class="{'calendarCurrentDay': date == initialDate &amp;&amp; month == initialMonth && year == initialYear}">
-										<span>{{ date }}</span>
-									</li>
-								</ul>
+								<div class="calendarEventsList">
+									<div class="calendarEventListTitle">Events in Month: </div>
+									<div class="calendarEventListBox"></div>
+								</div>
 							</div>
 				       	</div>
 				    </div>
