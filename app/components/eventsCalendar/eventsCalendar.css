@@ -36,7 +36,8 @@
   .eventsCalendar{
     display: inline-block;
     border-radius: 3px;
-    max-height: 80%;
+    max-height: 90%;
+    min-height: 80%;
     width: 100%;
     background: #ffdaa2;
   }
@@ -56,6 +57,11 @@
     padding: 30px;
     font-size: 30px !important;
     cursor: pointer;
+  }
+  .chevronRight:hover, .chevronLeft:hover{
+    background: #cccccc;
+    color: white;
+    transition: all 0.1s ease-in-out;
   }
   .calendarHeaderMonth{
     display: inline-block;
@@ -152,7 +158,35 @@
     width: 100%;
     position: relative;
     float: left;
+  }
+  .calendarEventInMonth{
     background: #fbe7c8;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 2%;
+    position: relative;
+    float: left;
+    cursor: pointer;
+  }
+  .calendarEventInMonth:hover{
+    background: #cccccc;
+    color: #ffffff;
+    transition: all 0.1s ease-in-out;
+  }
+  .calendarEventInMonthDate{
+    font-size: 12px;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  .calendarEventInMonthTitle{
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    padding: 9px;
   }
   .modal-calendar-enter {
     opacity: 0;

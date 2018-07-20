@@ -24,8 +24,17 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 									</ul>
 								</div>
 								<div class="calendarEventsList">
-									<div class="calendarEventListTitle">Events in Month: </div>
-									<div class="calendarEventListBox"></div>
+									<div class="calendarEventListTitle">Events this Month: </div>
+									<div class="calendarEventListBox">
+										<div class="calendarEventInMonth">
+											<div class="calendarEventInMonthDate">27/07/2018</div>
+											<div class="calendarEventInMonthTitle">MeetUp: panorama AR</div>
+										</div>
+										<div class="calendarEventInMonth">
+											<div class="calendarEventInMonthDate">31/07/2018</div>
+											<div class="calendarEventInMonthTitle">Codemotion: ponencia UX para chatbots</div>
+										</div>
+									</div>
 								</div>
 							</div>
 				       	</div>
