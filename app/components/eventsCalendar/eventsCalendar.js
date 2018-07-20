@@ -26,13 +26,9 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 								<div class="calendarEventsList">
 									<div class="calendarEventListTitle">Events this Month: </div>
 									<div class="calendarEventListBox">
-										<div class="calendarEventInMonth">
-											<div class="calendarEventInMonthDate">27/07/2018</div>
-											<div class="calendarEventInMonthTitle">MeetUp: panorama AR</div>
-										</div>
-										<div class="calendarEventInMonth">
-											<div class="calendarEventInMonthDate">31/07/2018</div>
-											<div class="calendarEventInMonthTitle">Codemotion: ponencia UX para chatbots</div>
+										<div v-for="events in listOfEvents" class="calendarEventInMonth">
+											<div class="calendarEventInMonthDate">{{ events.date }}</div>
+											<div class="calendarEventInMonthTitle">{{ events.title }}</div>
 										</div>
 									</div>
 								</div>
@@ -44,7 +40,11 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 		return {
 			today: moment(),
 			dateContext: moment(),
-			days: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+			days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+			listOfEvents: [
+				{date: '27/07/2018', title:'MeetUp: panorama AR'},
+				{date: '31/07/2018', title:'Codemotion: ponencia UX para chatbots'}
+			]
 		}
 	},
 	computed: {
@@ -67,7 +67,6 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 		firstDayOfMonth: function () {
 			var t = this;
 			var firstDay = moment(t.dateContext).subtract((t.currentDate - 1), 'days');
-			console.log(firstDay);
 			return firstDay.weekday();
 		},
 		initialDate: function () {
@@ -76,7 +75,6 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 		},
 		initialMonth: function () {
 			var t = this;
-			console.log(t.today.format('MMMM'));
 			return t.today.format('MMMM');
 		},
 		initialYear: function () {
@@ -91,7 +89,6 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 	methods: {
 		activeMenu: function(){
 			this.active = !this.active;
-			console.log(this.today);
 		},
 		addMonth: function () {
 			var t = this;

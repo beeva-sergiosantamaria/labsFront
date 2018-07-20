@@ -145,7 +145,7 @@
   }
   .calendarEventListTitle{
     font-size: 20px;
-    padding: 10px;
+    padding: 0px 10px;
     display: inline-block;
     width: 100%;
     position: relative;
