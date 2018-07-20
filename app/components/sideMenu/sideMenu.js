@@ -9,7 +9,8 @@ let SideMenu = Vue.component("sidemenu-component", {
 				</div>`,
 	data() {
 		return {
-			active: false
+			active: false,
+			itemsSelected: []
 		}
 	},
 	methods: {
@@ -17,9 +18,17 @@ let SideMenu = Vue.component("sidemenu-component", {
 			this.active = !this.active;
 		},
 		addFilter: function(value){
-			value.status = !value.status; 
+			if(this.itemsSelected.indexOf(value.tag) > -1 ) this.itemsSelected.splice($.inArray(value.tag, this.itemsSelected),1);
+			else this.itemsSelected.push(value.tag);
+			value.status = !value.status;
 			this.$root.files.forEach( item => {
-				if( item.tag == value.tag ) item.filtered = !item.filtered;
+				if( this.itemsSelected.indexOf(item.tag) > -1 ) item.filtered = true;
+				else item.filtered = false;
+			})
+			this.$root.filterList.forEach( item =>{
+				if( this.itemsSelected.indexOf(item.tag) > -1 ) item.status = true;
+				else item.status = false;
+				//if( item.tag != object.tech ) item.status = !item.status;
 			})
 		}
 	}	

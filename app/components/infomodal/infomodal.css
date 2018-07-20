@@ -1,41 +1,43 @@
 .techBox{
-	min-height: 450px;
-	background-color: #a0a0a0;
-	text-align: center;
-	padding: 3% 0%;
+    height: 90%;
+    min-height: 450px;
+    /*background-color: #a0a0a0;*/
+    text-align: center;
+    padding: 3% 0%;
 }
 .techFile{
     border-radius: 20px;
     background-color: white;
     display: inline-block;
     text-align: left;
-    width: 60%;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     box-shadow: 2px 3px 7px 0px rgba(179,179,179,1);
-    overflow: hidden;
+    overflow: scroll;
 }
 .toolFileTitleBox, .toolFileAudiovisBox, .toolFilefirstStepsBox, .toolFileLinksBox, .toolFileTypeBox, .toolFileDemoDescBox{
-	padding-left: 8%;
-	margin-bottom: 2%;
+    padding-left: 8%;
+    margin-bottom: 2%;
     padding-bottom: 2%;
 }
 .closeFileBox {
-	width: 100%;
-	text-align: right;
+    width: 100%;
+    text-align: right;
 }
 .closeFileButton{
     display: inline-block;
     padding: 15px;
     cursor: pointer;
     color: #ffffff;
-    margin-right: 15%;
+    /*margin-right: 15%;*/
 }
 .closeFileIcon{
-	font-size: 40px !important;
+    font-size: 40px !important;
 }
 .toolFileTitleBox{
-	width: 100%;
-	text-align: left;
+    width: 100%;
+    text-align: left;
     margin-bottom: 0%;
 }
 .toolFileTag{
@@ -150,7 +152,7 @@
     color: white;
     font-size: 20px;
     text-align: center;
-    padding: 2% 0%;
+    padding: 2% 1%;
     width: 15%;
     float: right;
     margin-right: 3%;
@@ -179,4 +181,61 @@
 .firstSteptext{
     margin-top: 10%;
     display: inline-grid;
+}
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  /*display: table;*/
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  /*display: table-cell;*/
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 1000px;
+  height: 90%;
+  margin: 0px auto;
+  padding: 0px 0px;
+  /*background-color: #fff;*/
+  border-radius: 2px;
+  /*box-shadow: 0 2px 8px rgba(0, 0, 0, .33);*/
+  transition: all .3s ease;
+  /*font-family: Helvetica, Arial, sans-serif;*/
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }

@@ -24,6 +24,8 @@ let header = Vue.component("header-component",{
 						<component :is="dynamicComponent"></component>	
 					</transition>	
 					<labsFooter></labsFooter>
+					<transition name="modal"><detailedInfo v-if="activeInfoModal"></detailedInfo></transition>
+					<transition name="modal-calendar"><calendarEvents v-if="activeCalendar"></calendarEvents></transition>
 				</div>`,
 	components:	{
 		"navbar": Navbar,
@@ -33,11 +35,26 @@ let header = Vue.component("header-component",{
 		"detailedInfo": detailedInfo,
 		"insights":insights,
 		"stacks":stacks,
-		"prototipes": prototipes
+		"prototipes": prototipes,
+		"calendarEvents": eventscalendar
 	},
 	data() {
 		return{
-			dynamicComponent: "tools"
+			dynamicComponent: "tools",
+			activeInfoModal: false,
+			activeCalendar: false,
+			events: [
+				{
+					title: 'Event1',
+					start: '2015-10-10 12:30:00',
+				  end: '2015-10-10 16:30:00'
+				},
+				{
+					title: 'Event2',
+					start: '2015-10-07 17:30:00',
+				  end: '2015-10-07 21:30:00'
+				}
+			]
 		}
 	},
 	created:  function(){

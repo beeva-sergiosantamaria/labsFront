@@ -1,6 +1,6 @@
 let tools = Vue.component("tools-component", {
 	template: 	`<div class="bodyBox" id="cardTable">
-					<div v-for="item in $root.files" v-on:click="$parent.dynamicComponent = 'detailedInfo'" class="grid-item infoCard" v-bind:class="{ inforcardFiltered: item.filtered }">
+					<div v-for="item in $root.files" v-on:click="$parent.activeInfoModal = 'true'" class="grid-item infoCard" v-bind:class="{ inforcardFiltered: item.filtered }">
 						<img class="infoCardImage" v-bind:src="item.sections[0].content[0].href">
 						<div class="infoCardText">
 							<div class="techName">{{ item.title }}</div>

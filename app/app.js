@@ -25,6 +25,8 @@ let app = new Vue({
 				if( this.filterList.find( i => i.tag == item.tag ) == undefined ) this.filterList.push({ "tag": item.tag,"type": "tag", "status": true });
 				if( this.filterList.find( i => i.tag == item.title ) == undefined ) this.filterList.push({ "tag": item.title,"type": "title", "parent": item.tag, "status": true });
 			});
+			console.log(this.files);
+			console.log(this.filterList);
 			new mediumData().getListOfPost("beeva-labs", postit => {
 				this.listOfPost = postit.items;
 				console.log(this.listOfPost);

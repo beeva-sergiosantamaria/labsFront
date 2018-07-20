@@ -4,21 +4,24 @@ let Navbar = Vue.component("navbar-component", {
 					<div id="brandLine" class="brandLine">
 						<div class="brandImage"><img src="app/assets/images/beevaLogo.png"/></div>
 						<div class="calendar">
-							<button class="button"><i class="material-icons calendarIcon">developer_board</i>Proximos eventos</button>
+							<button v-on:click="$parent.activeCalendar = 'true'" class="button"><i class="material-icons calendarIcon">developer_board</i>Proximos eventos</button>
 						</div>
 					</div>
 					<div id="menuBar" class="ToolsMenu" v-bind:class="{ toolsMenuFixed: scrollLevel }" v-on:scroll="handleScroll">
 						<div v-on:click="ActiveMenuTool(item)" :id="item" v-for="item in ToolsMenu.Sections" v-bind:class="{ buttonsActive: item === ToolActive }" class="buttons">{{ item }}</div>
 						<input type="text" class="SearchBar" v-model="inputValue" v-on:keyup="inputTypeHead($event.target.value)" placeholder="What are you looking for?"><i class="material-icons searchBarIcon">search</i></input>
 						<div id="searchResultBox" class="searchResultBox">
-							<div :id="item" v-for="item in itemsFounded" v-on:click="showFilterSearchResult(item)" class="searchResult"><div style="display: inline-block;" v-if="item.type == 'tag'">#</div>{{ item.tech }}</div>
+							<div :id="item" v-for="item in itemsFounded" v-on:click="showFilterSearchResult(item)" class="searchResult">
+								<div style="display: inline-block;" v-if="item.type == 'tag'">#</div>
+								{{ item.tech }}
+							</div>
 						</div>
 					</div>
 				</div>`,
 	data() {
 		return {
 			ToolsMenu: {
-				Sections: ['Tools', 'Stacks', 'Prototipes', 'Insights', 'Events']
+				Sections: ['Tools', 'Stacks', 'Prototipes', 'Insights']
 			},
 			ToolActive: 'Tools',
 			scrollLevel : false,
@@ -48,18 +51,25 @@ let Navbar = Vue.component("navbar-component", {
 			}
 		},
 		showFilterSearchResult: function(object){
+			console.log(object);
 			if(object.type == "tag"){
 				this.inputValue = "";
 				this.itemsFounded = [];
 				this.$root.filterList.forEach( item =>{
-						if( item.tag == object.tech ) item.status = !item.status;
-					})
+					if( item.tag != object.tech ) item.status = true;
+					else item.status = false
+				})
 				this.$root.files.forEach( item => {
-					if( item.tag == object.tech ) item.filtered = !item.filtered;
+					if( item.tag != object.tech ) item.filtered = true;
+					else item.filtered = false;
 				})
 			}
 			else if( object.type == "title" ){
 				this.inputValue = object.tech;
+				this.$root.files.forEach( item => {
+					if( item.title != object.tech ) item.filtered = true;
+					else item.filtered = false;
+				})
 				this.itemsFounded = [];
 			}
 		}

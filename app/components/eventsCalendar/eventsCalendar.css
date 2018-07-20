@@ -1,0 +1,108 @@
+
+.modal-mask-calendar {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    /*display: table;*/
+    transition: opacity .3s ease;
+  }
+  
+  .modal-wrapper-calendar {
+    /*display: table-cell;*/
+    vertical-align: middle;
+  }
+  
+  .modal-container-calendar {
+    width: 1000px;
+    height: 90%;
+    margin: 0px auto;
+    padding: 0px 0px;
+    /*background-color: #fff;*/
+    border-radius: 2px;
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, .33);*/
+    transition: all .3s ease;
+  }
+  .closeCalendarButton{
+      display: inline-block;
+      padding: 15px;
+      cursor: pointer;
+      color: #ffffff;
+      /*margin-right: 15%;*/
+  }
+  .eventsCalendar{
+    background: #ffffff;
+    display: inline-block;
+  }
+  .calendarHeader{
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 50%;
+    height: 100px;
+  }
+  .chevronLeft{
+    float: left;
+    padding: 30px;
+    font-size: 30px !important;
+  }
+  .chevronRight{
+    float: left;
+    padding: 30px;
+    font-size: 30px !important;
+  }
+  .calendarHeaderMonth{
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+  }
+  .calendarWeekdays{
+    display: inline-block;
+    list-style: none;
+    width: 50%;
+    height: 30px;
+  }
+  .calendarWeekDayText{
+    display: inline-block;
+    width: 70px;
+    float: left;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .calendarDates{
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+  }
+  .calendarDaysText{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: #eeeeee;
+    float: left;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .blackDay{
+    background: #cccccc;
+  }
+  .calendarCurrentDay{
+    background: #ffdaa2;
+  }
+  .modal-calendar-enter {
+    opacity: 0;
+  }
+  
+  .modal-calendar-leave-active {
+    opacity: 0;
+  }
+  
+  .modal-calendar-enter .modal-container-calendar,
+  .modal-calendar-leave-active .modal-container-calendar {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
