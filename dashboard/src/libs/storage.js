@@ -1,4 +1,4 @@
-class Storage {
+export default class Storage {
 	constructor() {
 		if (window.localStorage) {
 			this.storage = window.sessionStorage || window.localStorage;

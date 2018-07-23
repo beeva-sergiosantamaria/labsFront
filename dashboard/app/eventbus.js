@@ -1,1 +1,0 @@
-window.EventBus = new Vue();

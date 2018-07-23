@@ -1,15 +1,15 @@
 let tools = Vue.component("tools-component", {
 	template: 	`<div class="bodyBox" id="cardTable">
-					<div v-for="item in $root.files" v-on:click="$parent.activeInfoModal = 'true'" class="grid-item infoCard" v-bind:class="{ inforcardFiltered: item.filtered }">
-						<img class="infoCardImage" v-bind:src="item.sections[0].content[0].href">
+					<div v-for="item in $root.files" v-on:click="$parent.openModal(item)" class="grid-item infoCard" v-bind:class="{ inforcardFiltered: item.filtered }">
+						<img class="infoCardImage" v-bind:src="item.logo">
 						<div class="infoCardText">
 							<div class="techName">{{ item.title }}</div>
-							<div class="techType">{{ item.sections[7].content[0].content }}</div>
+							<div class="techType">{{ item.tag }}</div>
 							<div class="techTag">{{ item.tag }}</div>
 						</div>
-						<div class="techFooter" v-bind:class="checkTechStatus(item.sections[8].content[0].content)">
+						<div class="techFooter" v-bind:class="checkTechStatus(item.status)">
 							<div class="techStatusTitle">Status</div>
-							<div class="techStatus">{{ item.sections[8].content[0].content }}</div>
+							<div class="techStatus">{{ item.status }}</div>
 						</div>
 					</div>
 				</div>`,
@@ -22,10 +22,10 @@ let tools = Vue.component("tools-component", {
 		},
 		checkTechStatus: function(value){
 			switch (value.toLowerCase()){
-				case "not yet":
+				case "wait":
 					return "techToDiscard";
 					break;
-				case "to adopt":
+				case "adopt":
 					return "techToAdopt";
 					break;
 				case "work in progress":

@@ -43,20 +43,27 @@ let header = Vue.component("header-component",{
 			dynamicComponent: "tools",
 			activeInfoModal: false,
 			activeCalendar: false,
+			detailedInfoCard:{},
 			events: [
 				{
 					title: 'Event1',
 					start: '2015-10-10 12:30:00',
-				  end: '2015-10-10 16:30:00'
+				    end: '2015-10-10 16:30:00'
 				},
 				{
 					title: 'Event2',
 					start: '2015-10-07 17:30:00',
-				  end: '2015-10-07 21:30:00'
+				    end: '2015-10-07 21:30:00'
 				}
 			]
 		}
 	},
 	created:  function(){
-	}	
+	},
+	methods: {
+		openModal: function(fileData){
+			this.detailedInfoCard = fileData;
+			this.activeInfoModal = true;
+		}
+	}		
 })

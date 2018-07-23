@@ -1,7 +1,14 @@
-let Alert = Vue.component("alert-component", {
-	template:	`<div class="alert fade" v-bind:class="[ { show: show }, type ]">
-					{{ message }}
-				</div>`,
+<template>
+	<div class="card shadow rounded fade toast-alert"
+		:class="[ { show: show }, type ]">
+		<div class="card-body py-3 px-4">
+			{{ message }}
+		</div>
+	</div>
+</template>
+
+<script>
+export default {
 	props: {
 		timeout: {
 			type: Number,
@@ -17,16 +24,9 @@ let Alert = Vue.component("alert-component", {
 		}
 	},
 	created() {
-		EventBus.$on("alert", ({ type, message }) => {
+		this.$eventbus.$on("alert", ({ type, message }) => {
 			if (this.types.indexOf(type) !== -1) this.alert(type, message);
 		});
-	},
-	mounted() {
-		this.$el.style.position = "fixed";
-		this.$el.style.display = "none";
-		this.$el.style.top = 40;
-		this.$el.style.right = 30;
-		this.$el.style.zIndex = 100;
 	},
 	methods: {
 		alert(type, message) {
@@ -58,4 +58,17 @@ let Alert = Vue.component("alert-component", {
 			
 		}
 	}
-});
+}
+</script>
+
+<style>
+	.toast-alert {
+		position: fixed;
+		display: none;
+		bottom: 50px;
+		left: 50%;
+		min-width: 200px;
+		transform: translateX(-50%);
+		z-index: 100;
+	}
+</style>

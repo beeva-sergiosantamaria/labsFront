@@ -11,7 +11,15 @@ let app = new Vue({
 			files: [],
 			filterList: [],
 			bodyType: 'Tools',
-			listOfPost: []
+			listOfPost: [],
+			firebase:  {
+				apiKey: credentials.apiKey,
+				authDomain: credentials.authDomain,
+				databaseURL: credentials.databaseURL,
+				projectId: credentials.projectId,
+				storageBucket: "",
+				messagingSenderId: credentials.messagingSenderId
+			}
 		}
 	},
 	created() {
@@ -19,17 +27,20 @@ let app = new Vue({
 	},
 	methods: {
 		loadDatas: function(){
-			let test = [];
-			this.files = fileData;
-			fileData.forEach(item => {
-				if( this.filterList.find( i => i.tag == item.tag ) == undefined ) this.filterList.push({ "tag": item.tag,"type": "tag", "status": true });
-				if( this.filterList.find( i => i.tag == item.title ) == undefined ) this.filterList.push({ "tag": item.title,"type": "title", "parent": item.tag, "status": true });
-			});
+			let sdk = firebase.initializeApp(this.firebase);
+			let db = new Database(sdk);
+			db.get("tools").then(tools => 
+				$.each(tools, function(item) {
+					console.log(tools[item]);
+					app.files.push(tools[item]);
+					if( app.filterList.find( i => i.tag == tools[item].tag ) == undefined ) app.filterList.push({ "tag": tools[item].tag,"type": "tag", "status": true });
+					if( app.filterList.find( i => i.tag == tools[item].title ) == undefined ) app.filterList.push({ "tag": tools[item].title,"type": "title", "parent": tools[item].tag, "status": true });
+				})
+			);
 			console.log(this.files);
 			console.log(this.filterList);
 			new mediumData().getListOfPost("beeva-labs", postit => {
 				this.listOfPost = postit.items;
-				console.log(this.listOfPost);
 			});
 		}
 	}
