@@ -2,3 +2,4 @@ node_modules/
 app/assets/credentials.js
 dashboard/node_modules
 dashboard/dist
+dashboard/config.json
