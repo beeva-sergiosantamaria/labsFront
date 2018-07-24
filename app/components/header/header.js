@@ -18,7 +18,7 @@ let header = Vue.component("header-component",{
 							<div class="labsScrollButton">Start exploring</div>
 						</div>
 					</div>
-					<sidemenu></sidemenu>
+					<!--<sidemenu></sidemenu>-->
 					<navbar></navbar>
 					<transition name="component-fade" mode="out-in">
 						<component :is="dynamicComponent"></component>	

@@ -64,16 +64,30 @@
     width: 100%;
 }
 .prototypingStack{
-	background-color: #1d6ca4;
+	background-color: #ff6633;
 }
 .productionStack{
-	background-color: #ff7c8f;
+	background-color: #006666;
 }
+
 .frontAreaBack{
-	background-color: #1d6ca4;
+	background-color: #57a3bd;
 }
 .backAreaBack{
-	background-color: #04bcf3;
+	background-color: #e99790;
+}
+.miAreaBack{
+	background-color: #ffff66;
+	color: #666666;
+}
+.blockChainAreaBack{
+	background-color: #49796b;
+}
+.IoTAreaBack{
+	background-color: #663399;
+}
+.HCIAreaBack{
+	background-color: #ff6699;
 }
 .techStatusTitle{
 	font-size: 12px;

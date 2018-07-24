@@ -20,9 +20,12 @@ let stacks = Vue.component("stacks-component",{
 	data() {
 		return {
 			stacksFiles:[
-				{area:"front-end", alcance:"prototyping", techs:["AngularJS", "nodeJS", "mongoDB"]},
-				{area:"back-end", alcance:"production", techs:["AngularJS", "nodeJS", "mongoDB"]},
-				{area:"front-end", alcance:"prototyping", techs:["AngularJS", "nodeJS", "mongoDB"]}
+				{area:"Front-end", alcance:"prototyping", techs:["AngularJS", "nodeJS", "mongoDB"]},
+				{area:"Back-end", alcance:"production", techs:["AngularJS", "nodeJS", "mongoDB"]},
+				{area:"IoT", alcance:"production", techs:["AngularJS", "nodeJS", "mongoDB"]},
+				{area:"BlockChain", alcance:"prototyping", techs:["AngularJS", "nodeJS", "mongoDB"]},
+				{area:"Machine intelligence", alcance:"production", techs:["AngularJS", "nodeJS", "mongoDB"]},
+				{area:"Human-computer-interactions", alcance:"prototyping", techs:["AngularJS", "nodeJS", "mongoDB"]}
 			]
 		}
 	},
@@ -44,6 +47,18 @@ let stacks = Vue.component("stacks-component",{
 					break;
 				case "back-end":
 					return "backAreaBack";
+					break;
+				case "iot":
+					return "IoTAreaBack";
+					break;
+				case "blockchain":
+					return "blockChainAreaBack";
+					break;
+				case "machine intelligence":
+					return "miAreaBack";
+					break;
+				case "human-computer-interactions":
+					return "HCIAreaBack";
 					break;
 			}
 		}
