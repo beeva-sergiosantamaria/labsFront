@@ -31,6 +31,7 @@ let app = new Vue({
 			let db = new Database(sdk);
 			db.get("tools").then(tools => 
 				$.each(tools, function(item) {
+					tools[item].filtered = false;
 					console.log(tools[item]);
 					app.files.push(tools[item]);
 					if( app.filterList.find( i => i.tag == tools[item].tag ) == undefined ) app.filterList.push({ "tag": tools[item].tag,"type": "tag", "status": true });

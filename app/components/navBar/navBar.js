@@ -51,17 +51,19 @@ let Navbar = Vue.component("navbar-component", {
 			}
 		},
 		showFilterSearchResult: function(object){
-			console.log(object);
+			console.log('tech: ',object);
 			if(object.type == "tag"){
 				this.inputValue = "";
 				this.itemsFounded = [];
 				this.$root.filterList.forEach( item =>{
+					console.log('filterList: ',item);
 					if( item.tag != object.tech ) item.status = true;
 					else item.status = false
 				})
 				this.$root.files.forEach( item => {
-					if( item.tag != object.tech ) item.filtered = true;
-					else item.filtered = false;
+					console.log('files: ',item);
+					if( item.tag != object.tech ) item.filtered = false;
+					else item.filtered = true;
 				})
 			}
 			else if( object.type == "title" ){
