@@ -125,12 +125,11 @@
     display: inline-block;
     width: 70px;
     height: 70px;
-    /*background: #eeeeee;*/
     float: left;
     padding: 8px;
     font-size: 10px;
     box-sizing: border-box;
-    background: #cccccc;
+    background: #e1e1e1;
   }
   .calendarCurrentDay{
     background: #ffdaa2;

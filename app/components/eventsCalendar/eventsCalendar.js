@@ -62,6 +62,7 @@ let eventscalendar = Vue.component("eventscalendar-component", {
 		},
 		currentDate: function () {
 			var t = this;
+			console.log();
 			return t.dateContext.get('date');
 		},
 		firstDayOfMonth: function () {

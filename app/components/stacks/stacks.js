@@ -3,15 +3,13 @@ let stacks = Vue.component("stacks-component",{
 	template: 	`<div class="stackBox" id="stacksTable">
 					<div v-for="item in stacksFiles" v-on:click="" class="stacksCard">
 						<div class="stackHeader" v-bind:class="areaBackgroundColor(item.area)">
-							<div class="techStatusTitle">Área</div>
-							<div class="techStatus">{{ item.area }}</div>
+							<div class="stackArea">{{ item.area }}</div>
 						</div>
 						<div class="stacksTechsList" v-for="techs in item.techs">
-							<div class="techName">{{ techs }}</div>
+							<div class="stackName">{{ techs }}</div>
 						</div>
 						<div class="stackFooter" v-bind:class="alcanceBackgroundColor(item.alcance)">
-							<div class="techStatusTitle">Alcance</div>
-							<div class="techStatus">{{ item.alcance }}</div>
+							<div class="stackStatus">Scope: {{ item.alcance }}</div>
 						</div>
 					</div>
 				</div>`,

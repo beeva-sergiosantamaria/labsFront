@@ -35,42 +35,24 @@
 .stacksTechsList{
     width: 100%;
 }
-.techName{
+.stackName{
 	font-size: 16px;
-	font-weight: bold;
 	margin-top: 15px;
 }
-.techType{
-	font-size: 12px;
-	margin-top: 10px;
-}
-.techTag{
-	color: #999999;
-	font-size: 12px;
-	margin-top: 10px;
+.stackArea{
+	font-size: 18px;
+	margin-top: 5px;
 }
 .stackHeader{
     color: white;
     padding: 15px 0px;
     width: 100%;
-    background-color: #04bcf3;
-}
-.stackFooter{
-    color: white;
-    padding: 15px 0px;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-.prototypingStack{
-	background-color: #ff6633;
-}
-.productionStack{
-	background-color: #006666;
+  	font-style: normal;
+  	font-weight: 500;
 }
 
 .frontAreaBack{
+	/*background: linear-gradient(to right, #57a3bd 0%,#57a3bd 10%,#000000 10%,white 10%,white 100%);*/
 	background-color: #57a3bd;
 }
 .backAreaBack{
@@ -89,11 +71,24 @@
 .HCIAreaBack{
 	background-color: #ff6699;
 }
-.techStatusTitle{
+.stackFooter{
+    color: white;
+    padding: 15px 0px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.stackStatusTitle{
 	font-size: 12px;
 }
-.techStatus{
+.stackStatus{
 	font-size: 16px;
-	font-weight: bold;
 	margin-top: 5px;
+}
+.prototypingStack{
+	color: #ff6633;
+}
+.productionStack{
+	color: #006666;
 }
