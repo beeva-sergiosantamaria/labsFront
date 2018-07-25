@@ -1,11 +1,11 @@
 <template>
 	<div class="my-4">
 		<label v-if="label">
-			<i v-if="label.iconClass" :class="label.iconClass"></i>
+			<i v-if="label.iconClass" class="mr-2" :class="label.iconClass"></i>
 			{{ label.text }} <span class="text-danger" v-if="required">*</span>
 		</label>
-		<p class="card-text pl-4 text-muted" v-if="!tempList.length">No step found.</p>
-		<ul v-if="tempList.length" class="list-group my-3">
+		<p class="card-text my-4 text-muted" v-if="!tempList">No step found.</p>
+		<ul v-if="tempList" class="list-group my-3">
 			<li class="list-group-item d-flex justify-content-between align-items-center" 
 				v-for="(item, index) in sortList()"
 				:key="`i-${ index }`">
@@ -19,26 +19,24 @@
 			</li>
 		</ul>
 
-		<div class="pl-4">
-			<label>New item</label>
-			<div class="row pl-4">
-				<div class="col-2">
-					<div class="form-group">
-						<input type="number" v-model="temp.order" class="form-control" placeholder="Order">
-					</div>
+		<label>New item</label>
+		<div class="row">
+			<div class="col-3">
+				<div class="form-group">
+					<input type="number" v-model="temp.order" class="form-control" placeholder="Order">
 				</div>
+			</div>
 
-				<div class="col-8">
-					<div class="form-group">
-						<input type="text" v-model="temp.content" class="form-control" placeholder="Content">
-					</div>
+			<div class="col-7">
+				<div class="form-group">
+					<input type="text" v-model="temp.content" class="form-control" placeholder="Content">
 				</div>
-				<div class="col-2">
-					<button type="button" 
-							class="btn btn-pill btn-outline-primary"
-							:class="{ 'btn-outline-light disabled': !(this.temp.order && this.temp.content) }" 
-							@click="addItem">Add</button>
-				</div>
+			</div>
+			<div class="col-2">
+				<button type="button" 
+						class="btn btn-pill btn-outline-primary"
+						:class="{ 'btn-outline-light disabled': !(this.temp.order && this.temp.content) }" 
+						@click="addItem">Add</button>
 			</div>
 		</div>
 	</div>

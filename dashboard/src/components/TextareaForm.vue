@@ -1,7 +1,7 @@
 <template>
 	<div class="form-group">
 		<label :for="name">
-			<i v-if="label.iconClass" :class="label.iconClass"></i>
+			<i v-if="label.iconClass" class="mr-2" :class="label.iconClass"></i>
 			{{ label.text }} <span v-if="required" class="text-danger">*</span>
 		</label>
 		<textarea :id="name" 

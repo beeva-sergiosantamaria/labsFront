@@ -31,9 +31,23 @@ export default {
 				},
 				{
 					tag: "a",
+					to: "/prototypes",
+					icon: "fas fa-flask",
+					label: "Prototypes",
+					exact: false
+				},
+				{
+					tag: "a",
 					to: "/tools",
-					icon: "fa fa-cog",
+					icon: "fas fa-toolbox",
 					label: "Tools",
+					exact: false
+				},
+				{
+					tag: "a",
+					to: "/stacks",
+					icon: "fas fa-database",
+					label: "Stacks",
 					exact: false
 				},
 				{

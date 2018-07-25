@@ -1,42 +1,31 @@
 <template>
-	<div class="my-4">
-		<label v-if="label">
+	<div class="form-group">                                           
+		<label :for="name">
 			<i v-if="label.iconClass" class="mr-2" :class="label.iconClass"></i>
-			{{ label.text }} <span class="text-danger" v-if="required">*</span>
+			{{ label.text }} <span v-if="required" class="text-danger">*</span>
 		</label>
-		<p class="card-text my-4 text-muted" v-if="!tempList">No items added.</p>
-		<ul v-if="tempList" class="list-group my-3">
+		<p class="card-text my-4 text-muted" v-if="!tempList.length">No items added.</p>
+		<ul class="list-group my-3">
 			<li class="list-group-item d-flex justify-content-between align-items-center" 
 				v-for="(item, index) in tempList"
 				:key="`i-${ index }`">
-				<a :href="item.url" target="_blank">{{ item.title }}</a>
+				{{ item.title }}
 				<a href="#" class="text-danger" @click.prevent="removeItem(item)">
 					<i class="fas fa-trash mr-2"></i>
 				</a>
 			</li>
 		</ul>
-		<div>
-			<label>New Link</label>
-			<div class="row">
-				<div class="col-5">
-					<div class="form-group">
-						<input type="text" v-model="temp.title" class="form-control" placeholder="Item title">
-					</div>
-				</div>
-
-				<div class="col-5">
-					<div class="form-group">
-						<input type="url" v-model="temp.url" class="form-control" placeholder="Item url">
-					</div>
-				</div>
-				<div class="col-2">
-					<button type="button" 
-							class="btn btn-pill btn-outline-primary"
-							:class="{ 'btn-outline-light disabled': !(this.temp.title && this.temp.url) }"
-							@click="addItem">Add</button>
-				</div>
-			</div>
-		</div>
+		
+		<select :id="name" 
+			class="form-control" 
+			v-model="temp" 
+			@change="addItem">
+			<option v-for="(option, index) in tools" 
+				:value="option" 
+				:key="`o-${ index }`">
+				{{ option.title }}
+			</option>
+		</select>
 	</div>
 </template>
 
@@ -45,6 +34,10 @@ export default {
 	props: {
 		name: {
 			type: String,
+			required: true
+		},
+		tools: {
+			type: Array,
 			required: true
 		},
 		required: {
@@ -72,7 +65,7 @@ export default {
 		return {
 			temp: { 
 				title: null,
-				url: null
+				id: null
 			},
 			tempList: []
 		}
@@ -87,12 +80,13 @@ export default {
 	},
 	methods: {
 		addItem() {
-			if (this.temp.title && this.temp.url) {
-				this.tempList.push(this.temp);
+			if (this.temp.title && this.temp.id) {
+				let founded = this.tempList.filter(t => t.title === this.temp.title);
+				if (founded.length == 0) this.tempList.push(this.temp);
 				this.temp = { 
 					title: null,
-					url: null
-				};
+					id: null
+				}
 			}
 		},
 		removeItem(item) {

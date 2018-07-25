@@ -1,7 +1,10 @@
 <template>
 	<div class="card">
 		<div class="card-body ">
-			<h4 class="card-title">Users</h4>
+			<h4 class="card-title">
+				<i class="fas fa-user-shield mr-2"></i>
+				Users
+			</h4>
 
 			<user-list name="Pending" 
 				v-if="pending.length"

@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 function resolve(dir) {
 	return path.resolve(__dirname, "..", dir);
@@ -10,14 +9,19 @@ function resolve(dir) {
 module.exports = {
 	context: path.resolve(__dirname, "../"),
 	mode: 'development',
-	entry: [
-		'./src/app.js'
-	],
+	entry: {
+		main: './src/app.js',
+	},
 	resolve: {
 		extensions: ['.js', '.json', '.vue'],
 		alias: {
+			"vue$": 'vue/dist/vue.esm.js',
 			"@": resolve('src')
 		}	
+	},
+	output: {
+		path: resolve('dist'),
+		filename: 'main.js'
 	},
 	module: {
 		rules: [
@@ -54,4 +58,19 @@ module.exports = {
 			jQuery: "jquery"
 		})
 	]
+}
+
+if (process.env.NODE_ENV === 'production') {
+	module.exports.plugins = (module.exports.plugins || []).concat([
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: '"production"'
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: { screw_ie8: true, warnings: false },
+			output: { comments: false },
+			sourceMap: false,
+		})
+	])
 }

@@ -7,7 +7,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-auto">
-						<img :src="user.picture" width="60" class="rounded-circle mr-3">
+						<img :src="user.picture" width="60" class="rounded-circle shadow-sm mr-3">
 					</div>
 					<div class="col-auto">
 						<span class="d-block">{{ user.name }}</span>

@@ -2,7 +2,10 @@
 	<div class="card">
 		<div class="card-body">
 			<div class="row justify-content-between mb-3 px-3">
-				<h4 class="card-title">Tools</h4>
+				<h4 class="card-title">
+					<i class="fas fa-toolbox mr-2"></i>
+					Tools
+				</h4>
 				<div class="col-auto">
 					<router-link to="/tools/new" tag="button" type="button" class="btn btn-primary btn-pill btn-sm">
 						<i class="fa fa-plus mr-2"></i>

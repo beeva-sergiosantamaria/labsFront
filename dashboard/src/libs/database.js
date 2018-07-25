@@ -9,7 +9,7 @@ export default class Database {
 	get(ref) {
 		return new Promise((resolve, reject) => {
 			this.database.ref(ref).once("value")
-				.then(snapshot => resolve(snapshot.val()))
+				.then(snapshot => resolve(snapshot.val(), snapshot.key))
 				.catch(reject);
 		});
 	}
