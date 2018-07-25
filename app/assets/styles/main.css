@@ -30,7 +30,7 @@
 }
 body{
 	overflow-x: hidden;
-	font-family: 'IBM Plex Sans';
+	font-family: 'IBM Plex Sans' !important;
   font-style: normal;
   font-weight: 300;
 	margin: 0px;
